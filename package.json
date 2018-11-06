@@ -1,0 +1,35 @@
+{
+  "name": "viggyb_warp-v_proxy",
+  "version": "1.0.0",
+  "description": "Proxy Server for Nike Jordan Sales Page modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WARP-V/ViggyB_WARP-V_proxy.git"
+  },
+  "keywords": [
+    "Nike",
+    "Jordan",
+    "shoes"
+  ],
+  "author": "Vignesh Balasundaram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WARP-V/ViggyB_WARP-V_proxy/issues"
+  },
+  "homepage": "https://github.com/WARP-V/ViggyB_WARP-V_proxy#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
