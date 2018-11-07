@@ -2,11 +2,14 @@
   "name": "viggyb_warp-v_proxy",
   "version": "1.0.0",
   "description": "Proxy Server for Nike Jordan Sales Page modules",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/proxy.server.js",
+    "servers": "concurrently --kill-others \"npm run server5\" \"npm run server6\"",
+    "server5": "nodemon services/main_photo_gallery/server/server.js",
+    "server6": "nodemon services/shoe_name_and_colors/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "concurrently": "^4.0.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",

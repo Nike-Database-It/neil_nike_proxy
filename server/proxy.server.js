@@ -11,6 +11,8 @@ app.use(morgan('dev'));
 app.use(parser.json());
 
 
+// GET METHODS
+
 // APP LISTENING PROTOCOL
 const PORT = 3500;
 app.listen(PORT, (error) => {
