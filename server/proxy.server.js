@@ -12,6 +12,10 @@ app.use(parser.json());
 
 
 // GET METHODS
+app.get('/:shoeID/similar', (req, res) => {
+  console.log(req.url, "GOT THE REQUEST");
+  res.end();
+});
 
 // APP LISTENING PROTOCOL
 const PORT = 3500;
