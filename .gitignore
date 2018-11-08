@@ -1,2 +1,11 @@
-# IGNORE NODE MODULES
-node_modules
+
+## mac osx ##
+.DS_Store
+
+## npm ##
+node_modules/
+package-lock.json
+
+
+
+

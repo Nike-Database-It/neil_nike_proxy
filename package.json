@@ -1,45 +1,34 @@
 {
-  "name": "viggyb_warp-v_proxy",
+  "name": "warpv-proxy",
   "version": "1.0.0",
-  "description": "Proxy Server for Nike Jordan Sales Page modules",
-  "main": "./src/index.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ignore-path .gitignore .",
-    "start": "nodemon server/proxy.server.js",
-    "servers": "concurrently --kill-others \"npm run server5\" \"npm run server6\"",
-    "server5": "nodemon services/main_photo_gallery/server/server.js",
-    "server6": "nodemon services/shoe_name_and_colors/server/server.js"
+    "start-all": "concurrently --kill-others 'npm run init-3001' 'npm run init-3002' 'npm run init-3003' 'npm run init-3004' 'npm run init-3005' 'npm run init-3006' 'npm run init-3007'",
+    "init-3001": "nodemon ./../01-similar-products-carousel/server/server.js",
+    "init-3002": "nodemon ./../02-header-search/server/server.js",
+    "init-3003": "nodemon ./../03-sizing-and-cart/server/server.js",
+    "init-3004": "nodemon ./../04-product-reviews/server/server.js",
+    "init-3005": "nodemon ./../05-photo-gallery/server/server.js",
+    "init-3006": "nodemon ./../06-name-and-colors/server/server.js",
+    "init-3007": "nodemon ./../07-page-footer/server/server.js",
+    "init-prox": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WARP-V/ViggyB_WARP-V_proxy.git"
+    "url": "git+https://github.com/WARP-V/proxy-wggodfrey.git"
   },
-  "keywords": [
-    "Nike",
-    "Jordan",
-    "shoes"
-  ],
-  "author": "Vignesh Balasundaram",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WARP-V/ViggyB_WARP-V_proxy/issues"
+    "url": "https://github.com/WARP-V/proxy-wggodfrey/issues"
   },
-  "homepage": "https://github.com/WARP-V/ViggyB_WARP-V_proxy#readme",
+  "homepage": "https://github.com/WARP-V/proxy-wggodfrey#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "path": "^0.12.7",
-    "save": "^2.3.2"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
-    "eslint": "^5.8.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "nodemon": "^1.18.6"
   }
 }
