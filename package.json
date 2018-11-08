@@ -11,7 +11,7 @@
     "init-3005": "nodemon ./../05-photo-gallery/server/server.js",
     "init-3006": "nodemon ./../06-name-and-colors/server/server.js",
     "init-3007": "nodemon ./../07-page-footer/server/server.js",
-    "init-prox": "nodemon server/server.js"
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/WARP-V/proxy-wggodfrey#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",

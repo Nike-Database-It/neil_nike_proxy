@@ -49,3 +49,17 @@
   float: left;
   padding: 25px 0px 0px 0px;
 }
+
+#header-container .sub-nav-header {
+  margin-left: 380px;
+}
+
+#header-container ul {
+  background-color: white;
+  align-content: center;
+  margin-left: 380px;
+}
+
+#header-container ul .sub-nav-item {
+  margin-right: 30px;
+}
