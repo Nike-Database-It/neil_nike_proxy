@@ -7,12 +7,23 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
 </head>
-<body>
-  <div id='search'></div>
+<body style="margin:0">
+  <div class='head-space'></div>
+  <div class='header'>
+    <div id='search'></div>
+  </div>
   <div id='mpg'></div>
-  <div id='name'></div>
-  <div id='sizing'></div>
-  <div id='review'></div>
+  <div class="info">
+    <div class="name container">
+      <div id='name'></div>
+    </div>
+    <div class="sizing container">
+      <div id='sizing'></div>
+    </div>
+    <div class="review container">
+      <div id='review'></div>
+    </div>
+  </div>
   <div id='car'></div>
   <div id='footer-container'></div>
   <script src="/lib/react.development.js"></script>

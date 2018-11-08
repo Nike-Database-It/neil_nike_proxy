@@ -1,0 +1,37 @@
+.header {
+  position: static;
+  display: block;
+}
+
+.head-space {
+  height: 71px;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+#mpg {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.info {
+  display: block;
+  float: right;
+  height: fit-content;
+  margin-right: 350px;
+}
+
+.container {
+  height: fit-content;
+  display: block;
+}
+
+#car h1 {
+  margin-top: 20px;
+}
+
+#car #outer-wrapper {
+  margin-bottom: 20px;
+}
