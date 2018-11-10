@@ -4,7 +4,7 @@
 }
 
 #stacked-content {
-  max-width: 1152px;
+  max-width: 1252px;
   margin: auto;
 }
 
@@ -12,7 +12,8 @@
   display: inline-block;
   float: left;
   width: calc(100% - 452px);
-  padding: 45px;
+  padding: 15px;
+  padding-right: 30px;
 }
 
 #colors-container {
@@ -20,6 +21,10 @@
   float: left;
   width: 317px;
   padding: 65px 45px 0px 0px;
+}
+
+#colors-container .shoe_color_option{
+  width: 19%;
 }
 
 #sizing-container {
@@ -54,6 +59,10 @@
   margin-left: 380px;
 }
 
+#header-container .sub-nav-header:hover {
+  cursor: pointer;
+}
+
 #header-container ul {
   background-color: white;
   align-content: center;
@@ -63,3 +72,4 @@
 #header-container ul .sub-nav-item {
   margin-right: 30px;
 }
+
