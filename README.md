@@ -1,4 +1,4 @@
-# [WARP-V] Nike Jordan Shoes Display - Main Photo Gallery
+# [WARP-V] Nike Jordan Shoes Display - PROXY SERVER
 
 > Nike's Air Jordan online store allows the user to select a certain shoe, view the shoe name, color options, other related shoes, and several other features all on the same page. This module focuses on rendering the full page by rerouting to servers on different modules and arranging all the dynamic modules appropriately on the web page.
 
