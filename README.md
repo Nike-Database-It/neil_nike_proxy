@@ -1,15 +1,10 @@
 # [WARP-V] Nike Jordan Shoes Display - PROXY SERVER
 
-> Nike's Air Jordan online store allows the user to select a certain shoe, view the shoe name, color options, other related shoes, and several other features all on the same page. This module focuses on rendering the full page by rerouting to servers on different modules and arranging all the dynamic modules appropriately on the web page.
+> This proxy server is designed to facilitate stress testing of the Nike Jordan Shoes online store to see how it can handle a massive amount of users.
 
 ## Related Projects
 
-  - https://github.com/WARP-V/shoe_name_and_colors
-  - https://github.com/WARP-V/Navigation-Search-Service
-  - https://github.com/WARP-V/page-footer
-  - https://github.com/WARP-V/Sizing-Cart_Service
-  - https://github.com/WARP-V/Review-Service
-  - https://github.com/WARP-V/main_photo_gallery
+  - https://github.com/Nike-Database-It/shoe_name_and_colors
 
 
 ## Table of Contents
@@ -21,6 +16,8 @@
 ## Usage
 
 > Created by Vignesh Balasundaram
+
+> Updated by Neil Vodoor
 
 > All rights reserved. Liscence: ISC
 
