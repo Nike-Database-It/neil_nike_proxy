@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const compression = require('compression');
+const proxy = require("http-proxy-middleware");
 
 const axios = require('axios');
 
@@ -14,11 +15,12 @@ app.use(compression());
 app.use(express.static(path.join(__dirname, './../public')));
 app.use(express.static(path.join(__dirname, './../node_modules')));
 
-app.get('/:productSku/similar', (req, res) => {
-  axios.get(`http://carousel.e2jhvfkpam.us-east-1.elasticbeanstalk.com/${ req.params.productSku }/similar`)
-    .then(resp => res.status(200).send(resp.data))
-    .catch(err => res.status(500).end(err.message));
-});
+app.use('/:productSku/similar',
+  proxy({
+    target: 'http://ec2-54-193-82-60.us-west-1.compute.amazonaws.com:3001/',
+    changeOrigin: true
+  })
+);
 
 app.get('/:text/search', (req, res) => {
   axios.get(`http://ec2-54-245-41-15.us-west-2.compute.amazonaws.com:3002/:text/search`)
@@ -50,16 +52,18 @@ app.get('/:productSku/images', (req, res) => {
     .catch(err => res.status(500).end(err.message));
 });
 
-app.get('/:productSku/colors', (req, res) => {
-  axios.get(`http://ec2-18-232-96-48.compute-1.amazonaws.com:3006/${ req.params.productSku }/colors`)
-    .then(resp => res.status(200).send(resp.data))
-    .catch(err => res.status(500).end(err.message));
-});
+app.use('/:productSku/colors',
+  proxy({
+    target: 'http://ec2-54-83-182-45.compute-1.amazonaws.com:3000/',
+    changeOrigin: true
+  })
+);
 
-app.get('/:productSku/colors/:style', (req, res) => {
-  axios.get(`http://ec2-18-232-96-48.compute-1.amazonaws.com:3006/${ req.params.productSku }/colors/${ req.params.style }`)
-    .then(resp => res.status(200).send(resp.data))
-    .catch(err => res.status(500).end(err.message));
-});
+app.use('/:productSku/colors/:style',
+  proxy({
+    target: 'http://ec2-54-83-182-45.compute-1.amazonaws.com:3000/',
+    changeOrigin: true
+  })
+);
 
 module.exports = app;
