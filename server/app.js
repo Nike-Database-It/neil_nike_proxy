@@ -15,12 +15,11 @@ app.use(compression());
 app.use(express.static(path.join(__dirname, './../public')));
 app.use(express.static(path.join(__dirname, './../node_modules')));
 
-app.use('/:productSku/similar',
-  proxy({
-    target: 'http://ec2-54-193-82-60.us-west-1.compute.amazonaws.com:3001/',
-    changeOrigin: true
-  })
-);
+app.get('/:productSku/similar', (req, res) => {
+  axios.get(`http://ec2-54-219-165-96.us-west-1.compute.amazonaws.com:3001/${req.params.productSku }/similar`)
+    .then(resp => res.status(200).send(resp.data))
+    .catch(err => res.status(500).end(err.message));
+})
 
 app.get('/:text/search', (req, res) => {
   axios.get(`http://ec2-54-245-41-15.us-west-2.compute.amazonaws.com:3002/:text/search`)
