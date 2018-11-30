@@ -46,11 +46,12 @@ app.use('/:productSku/reviews',
   })
 );
 
-app.get('/:productSku/images', (req, res) => {
-  axios.get(`http://ec2-54-174-152-69.compute-1.amazonaws.com:3005/${ req.params.productSku }/images`)
-    .then(resp => res.status(200).send(resp.data))
-    .catch(err => res.status(500).end(err.message));
-});
+app.use('/:productSku/images',
+  proxy({
+    target: 'http://ec2-54-219-162-194.us-west-1.compute.amazonaws.com:3005/',
+    changeOrigin: true
+  })
+);
 
 app.use('/:productSku/colors',
   proxy({
